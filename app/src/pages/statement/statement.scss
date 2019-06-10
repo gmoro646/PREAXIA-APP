@@ -1,0 +1,83 @@
+page-statement {
+
+  .smallcard {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .smallcardpadding {
+    padding-top: 53px
+  }
+
+  .largecard {
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    border-radius: 35px;
+    text-align: center;
+  }
+
+  .largecardpadding {
+    padding-top: 25px
+  }
+
+  .iconsize {
+    text-align: center;
+    font-size: 24px;
+    color: #3d5f93;
+    padding-top: 8px;
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  .precard {
+    position: relative;
+    right: 4px;
+    height: 34px;
+    /*padding:10px;*/
+    width: 101px;
+    font-size: 15px;
+    border-radius: 15px;
+    color: #3d5f93;
+  }
+
+  .taskcard {
+    height: 140px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 10px
+  }
+
+  .imgsize {
+    background: transparent;
+    width: 90px;
+    height: 90px;
+    padding: 10px
+  }
+
+  .font-head {
+    font-size: 36px;
+    color: #193d66;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .spinnerclass {
+    z-index: 1;
+    width: 100%;
+    zoom: 2;
+    position: absolute;
+    top: 40%;
+  }
+  .button-ios
+  {
+    height: 3.6rem;
+  }
+}

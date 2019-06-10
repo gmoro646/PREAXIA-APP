@@ -1,0 +1,177 @@
+page-recentclaim {
+
+  .smallcard {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .smallcardpadding {
+    padding-top: 53px
+  }
+
+  .largecard {
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    border-radius: 35px;
+    text-align: center;
+  }
+
+  .largecardpadding {
+    padding-top: 25px
+  }
+
+  .iconsize {
+    text-align: center;
+    font-size: 24px;
+    color: #3d5f93;
+    padding-top: 8px;
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  .precard {
+    position: relative;
+    right: 4px;
+    height: 34px;
+    /*padding:10px;*/
+    width: 101px;
+    font-size: 15px;
+    border-radius: 15px;
+    color: #3d5f93;
+  }
+
+  .taskcard {
+    height: 140px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 10px
+  }
+
+  .item-width {
+    width: 87%;
+    padding: 5px 0px 10px 10px;
+    margin: 0px 15px 15px auto;
+    -webkit-box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+    -moz-box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+    box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+  }
+
+  .text-heading {
+    font-size: 16px;
+    color: #61dcb3;
+    text-transform: uppercase;
+  }
+
+  .text-sub-heading {
+    font-size: 15px;
+    color: #6577ae;
+    text-transform: capitalize;
+  }
+
+  .imgsize {
+    background: transparent;
+    width: 90px;
+    height: 90px;
+    padding: 10px
+  }
+
+  .font-head {
+    font-size: 36px;
+    color: #193d66;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .lav-text {
+    font-size: 12px;
+    margin-left: 15px;
+    color: #fff;
+  }
+
+  .icon-pos {
+    color: #f7622a;
+    font-size: 24px;
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    text-shadow: 1px 1px 12px #FEE9E2;
+  }
+
+  .card-block-active {
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #3d5399;
+    color: #fff;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(164,234,218,1);
+    -moz-box-shadow: 0px 5px 30px 0px rgba(164,234,218,1);
+    box-shadow: 0px 5px 30px 0px rgba(164,234,218,1);
+  }
+
+  .card-block-unactive {
+    padding: 10px;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #999;
+    -webkit-box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+    -moz-box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+    box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+  }
+  .acanduc .card-ios  
+  {
+    width: 100%;
+  }
+
+  .card-block-unactive p {
+    color: #999;
+  }
+
+  .item-width {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+    -moz-box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+    box-shadow: 0px 13px 37px 0px rgba(230,230,230,1);
+  }
+
+  .text-heading {
+    font-size: 14px;
+    line-height: 30px;
+    color: #999;
+    text-transform: capitalize;
+  }
+
+  .text-sub-heading {
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .chev-icon {
+    margin-top: 0px !important;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #999;
+  }
+
+  .spinnerclass {
+    z-index: 1;
+    width: 100%;
+    zoom: 2;
+    position: absolute;
+    top: 40%;
+  }
+}

@@ -1,0 +1,43 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+ 
+  <h2 margin-left style="color:#3e4a59">Welcome back!</h2>
+  <div padding style="padding-top:10px;">
+    <ion-list>
+      <ion-item class="border-ui" no-padding>
+        <ion-label floating class="label-fix">Username</ion-label>
+        <ion-icon style="margin-left:10px;" name="contact" item-left primary></ion-icon>
+        <ion-input class="input-fix" type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item class="border-ui border-bottom-focus" no-padding>
+        <ion-label floating class="label-fix">Password</ion-label>
+        <ion-icon style="margin-left:10px;" name="ios-lock-outline" item-left primary></ion-icon>
+        <ion-input class="input-fix" type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-row margin-top>
+      <ion-col col-7>
+        <ion-item no-lines style="padding:0px">
+          <!--<ion-radio id="rem" value="true" (click)="rememberMe($event)"></ion-radio>-->
+          <ion-checkbox style="margin: unset" id="rem" [(ngModel)]="rem"></ion-checkbox>
+          <ion-label style="color:#999;margin-left:25px;">Remember me</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col-5 text-right>
+        <p style="color:#435d8f">Forgot password?</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div margin-horizontal style="margin-top:30px;">
+    <button (click)="doLogin()" class="btnfooter" ion-button block>LOGIN</button>
+    <p text-center margin-vertical>New User? <span style="color:#435d8f">Sign up</span></p>
+  </div>
+</ion-content>

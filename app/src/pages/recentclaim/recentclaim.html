@@ -1,0 +1,66 @@
+<ion-header no-border style="background:#f8f8f8">
+  <ion-navbar transparent>
+    <ion-title text-center>
+      <span style="color:#000 !important">Recent Claims</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background:#fff">
+  <ion-spinner class="spinnerclass" *ngIf="show==false"></ion-spinner>
+  <ion-row padding-top style="padding-bottom:50px;justify-content: center;background:#f8f8f8;">
+    <ion-col col-6>
+      <ion-item style="background-color:transparent;text-align:center" no-lines (click)="showPolicy()">
+        <p style="color:#939393">Contribution Plan</p>
+    <h3 style="font-size: 17px;color:#606060">{{policyNo}}</h3>
+  </ion-item>
+      <!--<ion-item>
+        <ion-label>Policy Number</ion-label>
+        <ion-select [(ngModel)]="policyNo" interface="action-sheet" (ionChange)="selectedPloicy(policyNo)" >
+          <ion-option value={{pno}} *ngFor="let pno of policies">{{pno}}</ion-option>
+        </ion-select>
+      </ion-item>-->
+    </ion-col>
+
+    <ion-col col-6>
+      <ion-item style="background-color:transparent;text-align:center" no-lines>
+        <p style="color:#939393">Account Type</p>
+        <button class="shadow-them" *ngIf="policyType" style="font-size: 10px;background:#22a6a5;font-weight: normal" ion-button small>{{policyType}}</button>
+      </ion-item>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row padding style="position: absolute;top:90px;width:100%">
+    <ion-col class="acanduc">
+      <ion-card id="card1" class="card-block-active" (click)="approvedClaim()" [ngClass]="{'active': selectedItem === 'item1'}">
+        <ion-icon name="podium"></ion-icon>
+        <p class="lav-text">Approved Claims</p>
+      </ion-card>
+    </ion-col>
+    <ion-col class="acanduc">
+      <ion-card id="card2" class="card-block-unactive" (click)="pendingClaim()">
+        <ion-icon name="podium"></ion-icon>
+        <p class="lav-text">Pending Claims</p>
+      </ion-card>
+    </ion-col>
+    <ion-col class="acanduc">
+      <ion-card id="card3" class="card-block-unactive" (click)="declinedClaim()" [ngClass]="{'active': selectedItem === 'item2'}">
+        <ion-icon name="podium"></ion-icon>
+        <p class="lav-text">Declined Claims</p>
+      </ion-card>
+      <ion-icon class="icon-pos" name="ios-alert"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-row padding style="margin-top: 70px;">
+    <ion-card class="item-width" *ngFor="let d of data">
+      <ion-item>
+        <ion-icon class="chev-icon" item-end name="ios-arrow-forward"></ion-icon>
+        <h2 class="text-heading">{{d.ServiceDescription}}</h2>
+        <p class="text-sub-heading">${{d.Amount}}</p>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+
+</ion-content>

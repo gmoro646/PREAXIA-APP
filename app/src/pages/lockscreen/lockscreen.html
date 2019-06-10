@@ -1,0 +1,57 @@
+<!---<ion-header no-shadow>
+<ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">{{ 'TUTORIAL_SKIP_BUTTON' | translate}}</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>-->
+
+<ion-content no-bounce>
+  <div class="ILS_lock" [ngClass]="!_showLockScreen ?  'ILS_lock-hidden' : ''">
+    <div class="ILS_label-row">
+      {{passcodeLabel}}
+    </div>
+    <p class="tagp">Please enter your passcode</p>
+    <div class="ILS_circles-row" [ngClass]="passcodeWrong ?  'ILS_shake' : ''">
+      <div class="ILS_circle" [ngClass]=" enteredPasscode.length>0 ? 'ILS_full' : ''"></div>
+      <div class="ILS_circle" [ngClass]=" enteredPasscode.length>1 ? 'ILS_full' : ''"></div>
+      <div class="ILS_circle" [ngClass]=" enteredPasscode.length>2 ? 'ILS_full' : ''"></div>
+      <div class="ILS_circle" [ngClass]=" enteredPasscode.length>3 ? 'ILS_full' : ''"></div>
+    </div>
+    <div class="ILS_numbers-row">
+      <div (click)="digit(1)" class="ILS_digit">1</div>
+      <div (click)="digit(2)" class="ILS_digit">2</div>
+      <div (click)="digit(3)" class="ILS_digit">3</div>
+    </div>
+    <div class="ILS_numbers-row">
+      <div (click)="digit(4)" class="ILS_digit">4</div>
+      <div (click)="digit(5)" class="ILS_digit">5</div>
+      <div (click)="digit(6)" class="ILS_digit">6</div>
+    </div>
+    <div class="ILS_numbers-row">
+      <div (click)="digit(7)" class="ILS_digit">7</div>
+      <div (click)="digit(8)" class="ILS_digit">8</div>
+      <div (click)="digit(9)" class="ILS_digit">9</div>
+    </div>
+    <div class="ILS_numbers-row">
+      <!-- <div *ngIf="ACDelbuttons" (click)="allClear()" class="ILS_digit ILS_ac">Forgot?</div>
+      <div (click)="digit(0)" class="ILS_digit">0</div>
+      <div *ngIf="ACDelbuttons" (click)="remove()" class="ILS_digit ILS_del"><ion-icon name="ion-close-round"></ion-icon></div> -->
+
+      <div (click)="forgot()" class="ILS_digit ILS_ac">Forgot?</div>
+      <div (click)="digit(0)" class="ILS_digit">0</div>
+      <div  (click)="remove()" class="ILS_digit ILS_del"><ion-icon name="close"></ion-icon></div>
+
+    </div>
+  </div>
+  
+</ion-content>
+
+
+<!-- <ion-footer>
+<div margin-horizontal>
+    <button (click)="login()" class="btnfooter" ion-button block>LOGIN</button>
+    <p text-center margin-vertical>Terms & Conditions</p>
+    <div class="border-bottom"></div>
+    </div>
+</ion-footer> -->

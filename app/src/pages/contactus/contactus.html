@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title text-center>
+      <span style="color:#000 !important;text-align:center">Contact us</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background:#f8f8f8">
+  <ion-row>
+    <ion-card style="box-shadow:none;" class="largecard shadow-rendom">
+      <img style="background-color:transparent !important;width:100%;margin:0 auto" src="assets/img/profile-logo-1.png">
+    </ion-card>
+  </ion-row>
+
+  <ion-row margin-top style="margin-top:50px;">
+    <ion-card class="item-width">
+      <ion-item>
+        <h2 class="text-heading">Phone</h2>
+      
+        <p class="text-sub-heading" (click)="launchDialer(+140304343434)">+140304343434</p>
+      </ion-item>
+    </ion-card>
+
+    <ion-card class="item-width">
+      <ion-item>
+        <h2 class="text-heading">Email</h2>
+        <p class="text-sub-heading" (click)="mailTo('Info@preaxia.com')" >Info@preaxia.com</p>
+      </ion-item>
+    </ion-card>
+
+    <ion-card class="item-width">
+      <ion-item>
+        <h2 class="text-heading">Address</h2>
+        <p class="text-sub-heading">Calgary Ab</p>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+</ion-content>

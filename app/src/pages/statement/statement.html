@@ -1,0 +1,111 @@
+<ion-row padding-top style="justify-content: center;background:#f8f8f8;padding-bottom:70px;">
+  <ion-col col-5>
+    <ion-item style="background-color:transparent" no-lines>
+      <p style="color:#939393">Policy Number</p>
+      <h3 style="font-size: 22px;color:#606060">232323</h3>
+    </ion-item>
+  </ion-col>
+
+  <ion-col col-5>
+    <ion-item style="background-color:transparent" no-lines>
+      <p style="color:#939393">Account Type</p>
+      <button class="shadow-them" style="font-size: 10px;background:#22a6a5;font-weight: normal" ion-button small>PRE FUNDED</button>
+      <!-- <h3 style="font-size: 22px;color:#606060">232323</h3> -->
+    </ion-item>
+  </ion-col>
+
+</ion-row>
+
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner class="spinnerclass" *ngIf="show==false"></ion-spinner>
+  <ion-row style="justify-content: center;margin-top: 0px;margin-bottom:20px">
+    <button style="transform:scale(1.0)" color="primary1" ion-button round>$Cad</button>
+  </ion-row>
+
+  <ion-row>
+    <h1 class="font-head">${{totalBalance}}</h1>
+    <p no-margin text-center style="color:#193d66;width:100%;font-weight: bold">Account Balance</p>
+  </ion-row>
+
+  <ion-row margin-top>
+    <h1 class="font-head" style="font-size: 20px">${{claimAmount}}</h1>
+    <p no-margin text-center style="color:#dcdcdc;width:100%;margin-top:5px;">Claimed Amount</p>
+  </ion-row>
+
+  <ion-list no-lines no-border *ngFor="let state of statementData">
+    <ion-list-header style="color:#7b899a;" no-margin no-lines no-border>
+      {{state.created_time}}
+    </ion-list-header>
+    <ion-item *ngFor="let state12 of state.areas">
+      <ion-avatar item-start>
+        <img src="https://previews.123rf.com/images/schlaumal/schlaumal1707/schlaumal170700056/83132276-money-icon-flat-design.jpg">
+      </ion-avatar>
+      <h2 *ngIf="state12.status == 'Deposited'">Deposited</h2>
+      <h2 *ngIf="state12.status == 'Refunded'">Refunded</h2>
+      <p style="color:#9299a0">{{state12.description}}</p>
+      <ion-note item-end style="color:#212a36">${{state12.amount}}</ion-note>
+
+    </ion-item>
+  </ion-list>
+
+  <!--<ion-list no-lines no-border>
+    <ion-list-header style="color:#7b899a;" no-margin no-lines no-border>
+      TODAY
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="https://previews.123rf.com/images/schlaumal/schlaumal1707/schlaumal170700056/83132276-money-icon-flat-design.jpg">
+      </ion-avatar>
+      <h2>Refunded</h2>
+      <p style="color:#9299a0">Dentist Claim #1234</p>
+      <ion-note item-end style="color:#212a36">$5000.00 </ion-note>
+
+    </ion-item>
+  </ion-list>-->
+  <!--<ion-list no-lines no-border>
+    <ion-list-header style="color:#7b899a" no-margin no-lines no-border>
+      YESTERDAY
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="https://previews.123rf.com/images/schlaumal/schlaumal1707/schlaumal170700056/83132276-money-icon-flat-design.jpg">
+      </ion-avatar>
+      <h2>Deposited</h2>
+      <p style="color:#9299a0">Prefunded Plan payment</p>
+      <ion-note item-end style="color:#008d3f ">$5000.00 </ion-note>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="https://previews.123rf.com/images/schlaumal/schlaumal1707/schlaumal170700056/83132276-money-icon-flat-design.jpg">
+      </ion-avatar>
+      <h2>Refunded</h2>
+      <p style="color:#9299a0">Massage therapy Claim#1234</p>
+      <ion-note item-end style="color:#212a36">$129.00 </ion-note>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-lines no-border>
+    <ion-list-header style="color:#7b899a;" no-margin no-lines no-border>
+      April 30,2019
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="https://previews.123rf.com/images/schlaumal/schlaumal1707/schlaumal170700056/83132276-money-icon-flat-design.jpg">
+      </ion-avatar>
+      <h2>Deposited</h2>
+      <p style="color:#9299a0">Prefunded Plan payment</p>
+      <ion-note item-end style="color:#008d3f">$5000.00 </ion-note>
+
+    </ion-item>
+  </ion-list>-->
+
+
+</ion-content>

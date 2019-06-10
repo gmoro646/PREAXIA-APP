@@ -1,0 +1,78 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-spinner class="spinnerclass" *ngIf="show==false"></ion-spinner>
+  <h2 padding-left padding-top no-margin style="color:#3e4a59">Submit a New Claim</h2>
+  <div padding style="padding-top:10px;">
+    <ion-list>
+
+      <ion-item class="border-ui" no-padding (click)="showClaimand()">
+        <ion-label floating class="label-fix">Claimand</ion-label>
+        <ion-input disabled class="input-fix" type="text" [(ngModel)]="claimand"></ion-input>
+      </ion-item>
+
+      <ion-item no-padding class="border-ui">
+        <ion-label floating class="label-fix">Service or Product Description</ion-label>
+        <ion-input class="input-fix" type="text" [(ngModel)]="description"></ion-input>
+      </ion-item>
+
+      <ion-item no-padding class="border-ui">
+        <ion-label floating class="label-fix">Service Provider</ion-label>
+        <ion-input class="input-fix" type="text" [(ngModel)]="provider"></ion-input>
+      </ion-item>
+
+      <ion-item no-padding class="border-ui">
+        <ion-label floating class="label-fix">Date</ion-label>
+        <ion-input class="input-fix" type="text" [(ngModel)]="serviceDate" (tap)="openCalendar()"></ion-input>
+      </ion-item>
+
+      <ion-item no-padding class="border-ui">
+        <ion-label floating class="label-fix">Amount</ion-label>
+        <ion-input class="input-fix" type="number" [(ngModel)]="amount"></ion-input>
+      </ion-item>
+
+      <ion-row margin-top>
+        <ion-col col-9>
+          <ion-item no-lines no-padding>
+            <h2 style="color:#425f90;margin-bottom: 10px;">Attach Supporting Documents</h2>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3 text-right style="height: 60px;">
+
+          <ion-fab bottom right style="margin-top:10px;">
+            <button ion-fab style="background-color:#22a6a5;"> <ion-icon style="font-size:24px" name="add"></ion-icon></button>
+
+            <ion-fab-list side="left">
+              <button ion-fab (click)="openCamera(1)"> <ion-icon style="font-size:24px;color:#12d187;line-height: 40px;" side="left" name="camera"></ion-icon></button>
+            </ion-fab-list>
+
+            <ion-fab-list>
+              <button ion-fab (click)="openCamera(0)"><ion-icon style="font-size:24px;color:#eb2250;line-height: 40px;" side="bottom" name="image"></ion-icon></button>
+            </ion-fab-list>
+
+          </ion-fab>
+        </ion-col>
+      </ion-row>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3 *ngFor="let img of imgs;">
+            <img [src]="img" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+  </div>
+  <div margin-horizontal style="margin-top:30px;">
+    <button round (click)="saveClaim()" class="btnfooter" ion-button block>Submit Claim</button>
+    <button round (click)="cancel()" class="btnfooter" ion-button block>Cancel</button>
+  </div>
+
+
+</ion-content>
+

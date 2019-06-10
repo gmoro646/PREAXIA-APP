@@ -1,0 +1,38 @@
+<ion-header no-shadow>
+  <!--<ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">{{ 'TUTORIAL_SKIP_BUTTON' | translate}}</button>
+    </ion-buttons>
+  </ion-navbar>-->
+</ion-header>
+
+<ion-content no-bounce>
+
+  <ion-slides pager="true" (ionSlideWillChange)="onSlideChangeStart($event)">
+    <ion-slide *ngFor="let slide of slides">
+      <p class="descriptext" [innerHTML]="slide.description"></p>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <img [src]="slide.image" class="slide-image" />
+    </ion-slide>
+   
+      
+  <!--<ion-slide>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slideimg"/>
+      <h2 >{{ 'TUTORIAL_SLIDE4_TITLE' | translate }}</h2>
+      <button ion-button icon-end large clear (click)="startApp()">
+        {{ 'TUTORIAL_CONTINUE_BUTTON' | translate }}
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>-->
+  </ion-slides>
+  
+</ion-content>
+
+
+<ion-footer>
+<div margin-horizontal>
+    <button (click)="login()" class="btnfooter" ion-button block>LOGIN</button>
+    <p text-center margin-vertical>Terms & Conditions</p>
+    <div class="border-bottom"></div>
+    </div>
+</ion-footer>

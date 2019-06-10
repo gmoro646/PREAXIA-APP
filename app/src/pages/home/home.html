@@ -1,0 +1,100 @@
+<!--<ion-header>
+
+  <ion-navbar>
+
+
+  </ion-navbar>
+
+</ion-header>-->
+
+<ion-content>
+  <ion-spinner name="bubbles" class="spinnerclass" *ngIf="show==false"></ion-spinner>
+  <ion-row>
+    <ion-col col-6 text-left>
+      <img src="assets/img/comment-icon.png">
+    </ion-col>
+
+    <ion-col col-6 text-right>
+      <img src="assets/img/setting-icon.png" (click)="logout()">
+    </ion-col>
+  </ion-row>
+
+  <div>
+    <ion-row>
+      <ion-col col-3 class="smallcardpadding">
+        <!--<ion-card class="smallcard shadow-rendom">
+          <img src="assets/img/menu-icon.png">
+        </ion-card>-->
+      </ion-col>
+      <ion-col col-6 class="largecardpadding ">
+        <ion-card style="box-shadow:none;" class="largecard shadow-rendom">
+          <img style="background-color:transparent !important;width:70%;margin:0 auto" src="assets/img/profile-logo-1.png">
+        </ion-card>
+      </ion-col>
+      <ion-col col-3 class="smallcardpadding ">
+        <!--<ion-card class="smallcard shadow-rendom">
+          <img src="assets/img/pen.png">
+        </ion-card>-->
+      </ion-col>
+    </ion-row>
+    <h4 text-center style="color:#242b33;font-weight:400;margin-bottom: -3px;" *ngIf="userData && userData.FirstName && userData.LastName">{{userData.FirstName}} {{userData.LastName}}</h4>
+    <ion-row style="justify-content: center ;margin-bottom: -15px;">
+      <ion-col col-6>
+        <ion-item style="background-color:transparent;text-align:center" (click)="showPolicy()" no-lines>
+          <p style="color:#939393">Contribution Plan </p>
+          <h3 style="font-size: 17px;color:#606060">{{policyNo}}</h3>
+        </ion-item>
+      </ion-col>
+
+      <ion-col col-6>
+        <ion-item style="background-color:transparent;text-align:center" no-lines>
+          <p style="color:#939393">Account Type</p>
+          <button class="shadow-them" *ngIf="policyType" style="font-size: 10px;background:#22a6a5;font-weight: normal" ion-button small>{{policyType}}</button>
+          <!-- <h3 style="font-size: 22px;color:#606060">232323</h3> -->
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+    <!--<ion-row style="justify-content:center">
+      <h5>Incorporated Business</h5>
+      <ion-card class="precard">
+        <img src="assets/img/pre-defined.png">
+      </ion-card>
+    </ion-row>-->
+  </div>
+
+  <ion-row style="margin-top:0;margin-bottom:10px;">
+    <img margin-vertical no-padding style="width:100%;margin-bottom:10px" src="assets/img/curve-hr.png">
+  </ion-row>
+
+  <div margin-bottom>
+    <ion-row>
+      <ion-col class="ios-width" col-6>
+        <ion-card class="taskcard card-shadow-blue" (click)="openSubmit()">
+          <ion-img class="imgsize" src="assets/img/pen.png"></ion-img>
+          <h2>Submit Claim</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ios-width" col-6>
+        <ion-card class="taskcard card-shadow-blue" (click)="openRecentClaim()">
+          <ion-img class="imgsize" src="assets/img/umbrella.png"></ion-img>
+          <h2>Recent Claims</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ios-width" col-6>
+        <ion-card class="taskcard card-shadow-blue" (click)="openStatement()">
+          <ion-img class="imgsize" src="assets/img/statement.png"></ion-img>
+          <h2>Statement</h2>
+        </ion-card>
+      </ion-col>
+      <ion-col class="ios-width" col-6>
+        <ion-card class="taskcard card-shadow-blue" (click)="openContactUs()">
+          <ion-img class="imgsize" src="assets/img/contact-us.png"></ion-img>
+          <h2>Contact us</h2>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

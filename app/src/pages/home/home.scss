@@ -1,0 +1,94 @@
+page-home {
+
+  .smallcard {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .smallcardpadding {
+    padding-top: 40px
+  }
+
+  .largecardpadding {
+    justify-content: center
+  }
+
+  .largecard {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 35px;
+    text-align: center;
+  }
+
+
+
+  .iconsize {
+    text-align: center;
+    font-size: 24px;
+    color: #3d5f93;
+    padding-top: 8px;
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  .precard {
+    position: relative;
+    right: 4px;
+    height: 34px;
+    /*padding:10px;*/
+    width: 101px;
+    font-size: 15px;
+    border-radius: 15px;
+    color: #3d5f93;
+  }
+
+  .taskcard {
+    padding: 10px;
+    height: 150px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: #3d5399;
+  }
+
+  .taskcard h2 
+  {
+    color:#fff;
+    font-weight: 100;
+  }
+
+  .imgsize {
+    background: transparent;
+    width: 90px;
+    height: 90px;
+    padding: 10px
+  }
+
+  .card-shadow-blue {
+    -webkit-box-shadow: 0px 5px 25px -1px rgba(112,234,207,1);
+    -moz-box-shadow: 0px 5px 25px -1px rgba(112,234,207,1);
+    box-shadow: 0px 5px 25px -1px rgba(112,234,207,1);
+  }
+
+  .spinnerclass {
+    z-index: 1;
+    width: 100%;
+    zoom: 3;
+    position: absolute;
+    top: 40%;
+  }
+
+  .ios-width .card-ios
+  {
+    width: calc(100% - 5px) !important;
+    transform: scale(0.9) !important;
+
+  }
+}
